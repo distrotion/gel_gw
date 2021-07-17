@@ -71,7 +71,7 @@ func main() {
 		fmt.Println(input.Query)
 		// str := fmt.Sprintf("%v", input)
 
-		graphqlClient := graphql.NewClient("http://34.101.230.112:27017/query")
+		graphqlClient := graphql.NewClient("http://34.101.204.44:9110/query")
 		graphqlRequest := graphql.NewRequest(input.Query)
 		var graphqlResponse interface{}
 		if err := graphqlClient.Run(context.Background(), graphqlRequest, &graphqlResponse); err != nil {
@@ -99,7 +99,7 @@ func main() {
 
 		//-----------------------------------------
 
-		graphqlClient := graphql.NewClient("http://34.101.230.112:27017/query")
+		graphqlClient := graphql.NewClient("http://34.101.204.44:9110/query")
 		graphqlRequest := graphql.NewRequest(output)
 		var graphqlResponse interface{}
 		if err := graphqlClient.Run(context.Background(), graphqlRequest, &graphqlResponse); err != nil {
@@ -121,7 +121,7 @@ func main() {
 		fmt.Println(reflect.TypeOf(input.Query))
 		// str := fmt.Sprintf("%v", input)
 
-		graphqlClient := graphql.NewClient("http://34.101.230.112:27017/query")
+		graphqlClient := graphql.NewClient("http://34.101.204.44:9110/query")
 		graphqlRequest := graphql.NewRequest(input.Query)
 		var graphqlResponse interface{}
 		if err := graphqlClient.Run(context.Background(), graphqlRequest, &graphqlResponse); err != nil {
